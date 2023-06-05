@@ -44,21 +44,21 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
-                    <a href="{{route('acceuil')}}" class="nav-item nav-link">Acceuil</a>
-                    <a href="{{route('actualiteview')}}" class="nav-item nav-link">Actualites</a>
-                    <a href="{{route('archive')}}" class="nav-item nav-link">Archives</a>
-                    <a href="{{route('articleview')}}" class="nav-item nav-link">Article in press</a>
-                    <a href="{{route('comite')}}" class="nav-item nav-link">Membres de comites</a>
-                    <a href="{{route('instr')}}" class="nav-item nav-link">Instruction aux auteurs</a>
+                    <a href="{{route('acceuil')}}" class="nav-item nav-link {{ Request::is('acceuil') ? 'active' : '' }}">Acceuil</a>
+                    <a href="{{route('actualiteview')}}" class="nav-item nav-link {{ Request::is('actualiteview') ? 'active' : '' }}">Actualites</a>
+                    <a href="{{route('archive')}}" class="nav-item nav-link {{ Request::is('archive') ? 'active' : '' }}">Archives</a>
+                    <a href="{{route('articleview')}}" class="nav-item nav-link {{ Request::is('articleview') ? 'active' : '' }}">Article in press</a>
+                    <a href="{{route('comite')}}" class="nav-item nav-link {{ Request::is('comite') ? 'active' : '' }}">Membres de comites</a>
+                    <a href="{{route('instr')}}" class="nav-item nav-link {{ Request::is('instr') ? 'active' : '' }}">Instruction aux auteurs</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Congres</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('programcongre') ? 'active' : '' }} {{ Request::is('resumecongre') ? 'active' : '' }}" data-toggle="dropdown">Congres</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="{{route('programcongre')}}" class="dropdown-item">Programme Congrès</a>
                             <a href="{{route('resumecongre')}}" class="dropdown-item">Résumé Congrès</a>
                         </div>
                     </div>
-                    <a href="{{route('viewphoto')}}" class="nav-item nav-link">Photos du mois</a>
-                    <a href="{{route('viewthese')}}" class="nav-item nav-link">Theses et memoire </a>
+                    <a href="{{route('viewphoto')}}" class="nav-item nav-link {{ Request::is('viewphoto') ? 'active' : '' }}">Photos du mois</a>
+                    <a href="{{route('viewthese')}}" class="nav-item nav-link {{ Request::is('viewthese') ? 'active' : '' }}">Theses et memoire </a>
                 </div>
             </div>
         </nav>
