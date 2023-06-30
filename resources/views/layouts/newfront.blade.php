@@ -36,13 +36,13 @@
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
-            <a href="{{route('acceuil')}}" class="navbar-brand font-weight-bold text-secondary" style="font-size:20px;">
+            <a href="{{route('acceuil')}}" class="navbar-brand font-weight-bold text-secondary" style="margin-left: -2%">
             <img src="{{asset('newfront/img/logo.png')}}" alt="logo"  width="90" height="50">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse"  style="font-size: 15px; margin-right:-5%;">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="{{route('acceuil')}}" class="nav-item nav-link {{ Request::is('acceuil') ? 'active' : '' }}">Acceuil</a>
                     <a href="{{route('actualiteview')}}" class="nav-item nav-link {{ Request::is('actualiteview') ? 'active' : '' }}">Actualites</a>
@@ -71,9 +71,7 @@
 
         <div class="container-fluid pt-3 pb-3">
             <p class="m-0 text-center text-white">
-                &copy; <a class="text-primary font-weight-bold" href="#">HNJM</a>. All Rights Reserved. Designed
-                by
-                <a class="text-primary font-weight-bold" href="">Rabutin</a>
+                &copy; 2023 <a class="text-primary font-weight-bold" href="#">HNJM</a>
             </p>
         </div>
     </div>
